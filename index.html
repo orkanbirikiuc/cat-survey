@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Survey on Cats</h1>
+    <p id="description">This survey has been conducted by the god himself, in order to improve the upcoming new version.</p>
+    <form id="survey-form">
+        <fieldset id="personal_information">
+            <label id="name-label">Name: <input type="text" id="name" placeholder="Enter your name" required /></label>
+            <label id="email-label">E-mail: <input type="email" id="email" placeholder="Enter your e-mail" required /></label>
+            <fieldset id="yes_no">
+                <p class="question">Do you own a sample of the previous version of species at home?</p>
+                <label class="radio_label"><input type="radio" name="ownership" value="yes"> Yes</label>
+                <label class="radio_label"><input type="radio" name="ownership" value="no"> No</label>
+                <p class="question">Do you like them?</p>
+                <label class="radio_label"><input type="radio" name="like" value="yes" required> Yes</label>
+                <label class="radio_label"><input type="radio" name="like" value="no"> No</label>
+            </fieldset>
+        </fieldset>
+        <fieldset id="cat_review">
+            <label id="number-label">If you like them, how much? (Rate out of 10)<input type="number" id="number" min="0" max="10" step="1" placeholder="10" required></label><br>
+            <label>If you don't like them, what is your excuse?
+                <select name="reason" aria-placeholder="Select one" id="dropdown">
+                    <option value="stinky">They are stinky</option>
+                    <option value="claws">They have dangerous claws</option>
+                    <option value="nolove">I dont know how to like something</option>
+                </select>
+            </label>
+            <fieldset id="features">
+                <p class="question" id="q_features">Select your favourite features: </p>
+                <label><input type="checkbox" name="features" value="furr"> Furrs and Paws</label><br>
+                <label><input type="checkbox" name="features" value="purr"> Purrs and Meows</label><br>
+                <label><input type="checkbox" name="features" value="cute"> Cutes and Cuddles</label><br>
+                </fieldset>
+            <label class="textarea_label">What bad things comes to your mind when you think about our lovely friends?<textarea name="bad" cols="30" rows="2"></textarea></label>
+            <label class="textarea_label">And what are the good ones?<textarea name="good" cols="30" rows="4"></textarea></label>
+            <label class="textarea_label">Would you suggest any features to be added in the new version?<textarea name="add" cols="30" rows="3"></textarea></label>
+        </fieldset>
+        <input type="submit" id="submit">
+    </form>
+</body>
+</html>
